@@ -27,7 +27,7 @@ let inactiveBackgroundColors: [UIColor] = [UIColor.orange]
     SubtitleSegment(id: UUID(), text: "анимацией", textSize: 36, startTime: 4.5, endTime: 5.5, textEffect: TextEffect(fontName: nil, textColor: UIColor.black, textGradientColors: nil, textPattern: nil, strokeStyles: [], globalStroke: nil, textShadows: [], animations: [], backgroundType: .rectangle, backgroundColors: [UIColor.green], backgroundPattern: nil)),
 ]
 
-@MainActor func applyEffect(subtitles: [SubtitleSegment]) -> [SubtitleSegment]{
+@MainActor public func applyEffect(subtitles: [SubtitleSegment]) -> [SubtitleSegment]{
     var appliedSubtitles: [SubtitleSegment] = []
     
     let activeTextEffect = TextEffect(textColor: activeTextColor, strokeStyles: [], textShadows: [], animations: [], backgroundType: activeBackgroundType, backgroundColors: activeBackgroundColors)
@@ -336,7 +336,7 @@ func createMultiStyleTextLayer(phrase: [SubtitleSegment], indexCurrentWord: Int,
 }
 
 
-func createPhraseLayer(subtitles: [SubtitleSegment], rect: CGSize) -> CALayer{
+public func createPhraseLayer(subtitles: [SubtitleSegment], rect: CGSize) -> CALayer{
     let parentLayer = CALayer()
         
     for (index, subtitle) in subtitles.enumerated() {
