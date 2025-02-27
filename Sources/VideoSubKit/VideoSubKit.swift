@@ -13,7 +13,7 @@ let inactiveTextColor: UIColor = UIColor.gray
 let activeBackgroundColors: [UIColor] = [UIColor.orange.withAlphaComponent(0.5)]
 let inactiveBackgroundColors: [UIColor] = [UIColor.orange]
 
-@MainActor let testSubtitles: [SubtitleSegment] = [
+@MainActor public let testSubtitles: [SubtitleSegment] = [
     SubtitleSegment(id: UUID(), text: "Это", textSize: 36, startTime: 0.0, endTime: 1.0, textEffect: TextEffect(fontName: nil, textColor: UIColor.black, textGradientColors: nil, textPattern: nil, strokeStyles: [], globalStroke: nil, textShadows: [], animations: [], backgroundType: .rectangle, backgroundColors: [UIColor.green], backgroundPattern: nil)),
     
     SubtitleSegment(id: UUID(), text: "простой", textSize: 36, startTime: 1.0, endTime: 2.0, textEffect: TextEffect(fontName: nil, textColor: UIColor.black, textGradientColors: nil, textPattern: nil, strokeStyles: [], globalStroke: nil, textShadows: [], animations: [], backgroundType: .rectangle, backgroundColors: [UIColor.green], backgroundPattern: nil)),
